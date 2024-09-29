@@ -141,3 +141,21 @@ footer {
     margin-top: 0;
     font-size: 1.8em;
 }
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-item {
+    flex-basis: 45%; /* Adapte les produits pour occuper 45% de la largeur */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
