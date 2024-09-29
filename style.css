@@ -149,13 +149,29 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px; /* Espace entre les produits */
+}
+
+.product-item {
+    flex-basis: 45%; /* Chaque produit occupe 45% de la largeur */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
     gap: 20px;
 }
 
 .product-item {
-    flex-basis: 45%; /* Adapte les produits pour occuper 45% de la largeur */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
