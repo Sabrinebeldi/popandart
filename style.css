@@ -151,3 +151,11 @@ footer {
     justify-content: space-between;
     gap: 20px; /* Espace entre les produits */
 }
+footer {
+    text-decoration: none !important;
+}
+
+footer a {
+    text-decoration: none !important;
+}
+
