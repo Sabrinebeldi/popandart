@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact - Pop&Art</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Script pour préremplir le champ produit et gérer la validation
+        document.addEventListener('DOMContentLoaded', function () {
+            // Préremplir le produit à partir de l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productParam = urlParams.get('product');
+            if (productParam) {
+                document.getElementById('product').value = productParam;
+            }
+
+            // Gestion de la soumission du formulaire
+            const form = document.getElementById('order-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche la soumission réelle
+
+                // Cacher le formulaire et afficher le message de confirmation
+                form.style.display = 'none';
+                document.getElementById('confirmation-message').style.display = 'block';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Pop&Art" width="150" height="50">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="order.html">Formulaire de contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formulaire de contact</h1>
+
+        <!-- Formulaire de commande -->
+        <form id="order-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Produit :</label>
+            <select id="product" name="product">
+                <option value="">Sélectionnez un produit</option>
+                <option value="R2D2 Multicolore">R2D2 Multicolore</option>
+                <option value="Sculpture Pop Art">Sculpture Pop Art</option>
+                <option value="Sully Anatomique">Sully Anatomique</option>
+                <option value="Totoro Style Van Gogh">Totoro Style Van Gogh</option>
+            </select>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Message de confirmation (d'abord masqué) -->
+        <div id="confirmation-message" style="display:none;">
+            <h2>Merci pour votre commande !</h2>
+            <p>Votre commande a été prise en charge. Nous vous contacterons sous peu pour confirmer les détails.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pop&Art. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

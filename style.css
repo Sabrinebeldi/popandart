@@ -1,0 +1,143 @@
+/* Formulaire stylisé */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #5CBEA0;
+}
+
+form input, form textarea, form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #5CBEA0;
+    outline: none;
+}
+
+form button {
+    background-color: #F2BD0F;
+    padding: 12px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #E92B8B;
+    color: white;
+}
+
+form .error {
+    color: red;
+    margin-top: 5px;
+}
+/* Style pour la section de présentation */
+.presentation {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presentation h1 {
+    color: #5CBEA0;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.presentation .cta {
+    font-size: 1.4em;
+    color: #E92B8B;
+    font-weight: bold;
+}
+
+.presentation strong {
+    color: #5CBEA0;
+}
+
+.presentation .cta strong {
+    color: #E92B8B;
+}
+/* Style pour l'en-tête (header) */
+header {
+    background-color: #E92B8B; /* Fond rose */
+    padding: 1em;
+    text-align: center; /* Centrer le texte */
+}
+
+header .logo img {
+    margin-bottom: 10px; /* Pour espacer le logo des boutons */
+}
+
+nav ul {
+    list-style-type: none; /* Retire les puces des boutons */
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline; /* Affiche les liens sur une seule ligne */
+    margin: 0 15px; /* Espacement entre les liens */
+}
+
+nav ul li a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: white; /* Texte blanc */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Souligne le texte au survol */
+}
+
+/* Style pour le pied de page (footer) */
+footer {
+    background-color: #E92B8B; /* Fond rose */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 1em 0;
+    font-size: 1em;
+}
+#confirmation-message {
+    background-color: #E92B8B;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#confirmation-message h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
