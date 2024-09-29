@@ -158,4 +158,7 @@ footer {
 footer a {
     text-decoration: none !important;
 }
-
+footer a {
+    text-decoration: none !important;
+    color: inherit; /* Pour hériter de la couleur du footer */
+}
