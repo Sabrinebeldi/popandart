@@ -169,4 +169,8 @@ h1 {
 .product-item a {
     text-decoration: none;
 }
+footer a {
+    pointer-events: none;  /* Désactive le lien */
+    text-decoration: none; /* Supprime le soulignement */
+}
 
