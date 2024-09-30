@@ -1,4 +1,105 @@
-/* Formulaire stylisé */
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #E92B8B;
+    padding: 1em;
+    text-align: center;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Products List */
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-item {
+    flex-basis: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-item h2 {
+    color: #5CBEA0;
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #E92B8B;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit; /* Pour hériter de la couleur parent */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -45,120 +146,10 @@ form button:hover {
     color: white;
 }
 
-form .error {
-    color: red;
-    margin-top: 5px;
-}
-/* Style pour la section de présentation */
-.presentation {
-    background-color: #fff;
-    color: #333;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Media Queries */
+@media (max-width: 768px) {
+    .product-item {
+        flex-basis: 100%;
+    }
 }
 
-.presentation h1 {
-    color: #5CBEA0;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.presentation p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.presentation .cta {
-    font-size: 1.4em;
-    color: #E92B8B;
-    font-weight: bold;
-}
-
-.presentation strong {
-    color: #5CBEA0;
-}
-
-.presentation .cta strong {
-    color: #E92B8B;
-}
-/* Style pour l'en-tête (header) */
-header {
-    background-color: #E92B8B; /* Fond rose */
-    padding: 1em;
-    text-align: center; /* Centrer le texte */
-}
-
-header .logo img {
-    margin-bottom: 10px; /* Pour espacer le logo des boutons */
-}
-
-nav ul {
-    list-style-type: none; /* Retire les puces des boutons */
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-}
-
-nav ul li {
-    display: inline; /* Affiche les liens sur une seule ligne */
-    margin: 0 15px; /* Espacement entre les liens */
-}
-
-nav ul li a {
-    text-decoration: none; /* Retire le soulignement des liens */
-    color: white; /* Texte blanc */
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Souligne le texte au survol */
-}
-
-/* Style pour le pied de page (footer) */
-footer {
-    background-color: #E92B8B; /* Fond rose */
-    color: white; /* Texte blanc */
-    text-align: center; /* Centrer le texte */
-    padding: 1em 0;
-    font-size: 1em;
-}
-#confirmation-message {
-    background-color: #E92B8B;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#confirmation-message h2 {
-    margin-top: 0;
-    font-size: 1.8em;
-}
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-.products-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Espace entre les produits */
-}
-footer {
-    text-decoration: none !important;
-}
-
-footer a {
-    text-decoration: none !important;
-}
-footer a {
-    text-decoration: none !important;
-    color: inherit; /* Pour hériter de la couleur du footer */
-}
