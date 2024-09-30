@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produits - Pop&Art</title>
+    <title>Formulaire de contact - Pop&Art</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Logo Pop&Art" width="150" height="auto">
+            <img src="images/logo.png" alt="Logo Pop&Art" width="150" height="50">
         </div>
         <nav>
             <ul>
@@ -22,47 +21,46 @@
     </header>
 
     <main>
-        <h1>Nos Produits</h1>
-        <div class="products-list">
-            <!-- Produit 1 -->
-            <div class="product-item">
-                <a href="order.html?product=R2D2 Multicolore">
-                    <img src="images/produit1.png" alt="Produit 1 - R2D2" width="300">
-                    <h2>R2D2 Multicolore</h2>
-                    <p>Une pièce artistique inspirée de Star Wars <br> Édition limitée à 10 exemplaires.</p>
-                </a>
-            </div>
+        <h1>Formulaire de contact</h1>
+        <form id="order-form" action="process_order.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
 
-            <!-- Produit 2 -->
-            <div class="product-item">
-                <a href="order.html?product=Sculpture Pop Art">
-                    <img src="images/produit2.png" alt="Produit 2 - Sculpture Pop Art" width="300">
-                    <h2>Sculpture Pop Art</h2>
-                    <p>Un chien aux couleurs vives et aux motifs de bande dessinée <br> Édition limitée à 5 exemplaires.</p>
-                </a>
-                            </div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
 
-            <!-- Produit 3 -->
-            <div class="product-item">
-                <a href="order.html?product=Sully Anatomique">
-                    <img src="images/produit3.png" alt="Produit 3 - Sully Anatomique" width="300">
-                    <h2>Sully Anatomique</h2>
-                    <p>Un modèle anatomique unique du personnage de Monstres & Cie <br> Édition limitée à 7 exemplaires.</p>
-                </a>
-            </div>
+            <label for="product">Produit :</label>
+            <select id="product" name="product" required>
+                <option value="R2D2 Multicolore">R2D2 Multicolore</option>
+                <option value="Sculpture Pop Art">Sculpture Pop Art</option>
+                <option value="Sully Anatomique">Sully Anatomique</option>
+                <option value="Totoro Style Van Gogh">Totoro Style Van Gogh</option>
+            </select>
 
-            <!-- Produit 4 -->
-            <div class="product-item">
-                <a href="order.html?product=Totoro Style Van Gogh">
-                    <img src="images/produit4.png" alt="Produit 4 - Totoro Peinture" width="300">
-                    <h2>Totoro Style Van Gogh</h2>
-                    <p>Totoro revisité dans le style de La Nuit étoilée de Van Gogh <br> Édition limitée à 10 exemplaires.</p>
-                </a>
-            </div>
-        </div>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">J'accepte la <a href="privacy.html">Politique de confidentialité</a>.</label>
+
+            <button type="submit">Envoyer</button>
+        </form>
     </main>
+
     <footer>
-        <p>© 2024 Pop&Art. Tous droits réservés.</p>
+        <p>&copy; 2024 Pop&Art. Tous droits réservés. <a href="privacy.html">Politique de confidentialité</a></p>
     </footer>
+
+    <!-- Bannière de consentement aux cookies -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: white; padding: 10px; text-align: center;">
+        <p>Ce site utilise des cookies pour améliorer votre expérience. <a href="privacy.html" style="color: #F2BD0F;">En savoir plus</a></p>
+        <button id="accept-cookies" style="padding: 10px; background-color: #5CBEA0; color: white; border: none;">J'accepte</button>
+    </div>
+
+    <script>
+        document.getElementById('accept-cookies').onclick = function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Ajouter la gestion des cookies ici si nécessaire
+        }
+    </script>
 </body>
-</html>
