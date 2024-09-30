@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de contact - Pop&Art</title>
+    <title>Produits - Pop&Art</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,36 +15,42 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="products.html">Produits</a></li>
-                <li><a href="order.html">Formulaire de contact</a></li>
+                <li><a href="contact.html">Formulaire de contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Formulaire de contact</h1>
-        <form id="order-form" action="process_order.php" method="POST">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
+        <h1>Nos Produits</h1>
+        <div class="products-list">
+            <!-- Produit 1 -->
+            <div class="product-item">
+                <img src="images/produit1.png" alt="Produit 1" width="300">
+                <h2>R2D2 Multicolore</h2>
+                <p>Une pièce artistique inspirée de Star Wars. Édition limitée à 10 exemplaires.</p>
+            </div>
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+            <!-- Produit 2 -->
+            <div class="product-item">
+                <img src="images/produit2.png" alt="Produit 2" width="300">
+                <h2>Sculpture Pop Art</h2>
+                <p>Un chien aux couleurs vives et aux motifs de bande dessinée. Édition limitée à 5 exemplaires.</p>
+            </div>
 
-            <label for="product">Produit :</label>
-            <select id="product" name="product" required>
-                <option value="R2D2 Multicolore">R2D2 Multicolore</option>
-                <option value="Sculpture Pop Art">Sculpture Pop Art</option>
-                <option value="Sully Anatomique">Sully Anatomique</option>
-                <option value="Totoro Style Van Gogh">Totoro Style Van Gogh</option>
-            </select>
+            <!-- Produit 3 -->
+            <div class="product-item">
+                <img src="images/produit3.png" alt="Produit 3" width="300">
+                <h2>Sully Anatomique</h2>
+                <p>Un modèle anatomique unique du personnage de Monstres & Cie. Édition limitée à 7 exemplaires.</p>
+            </div>
 
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">J'accepte la <a href="privacy.html">Politique de confidentialité</a>.</label>
-
-            <button type="submit">Envoyer</button>
-        </form>
+            <!-- Produit 4 -->
+            <div class="product-item">
+                <img src="images/produit4.png" alt="Produit 4" width="300">
+                <h2>Totoro Style Van Gogh</h2>
+                <p>Totoro revisité dans le style de La Nuit étoilée de Van Gogh. Édition limitée à 10 exemplaires.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -60,7 +66,9 @@
     <script>
         document.getElementById('accept-cookies').onclick = function() {
             document.getElementById('cookie-banner').style.display = 'none';
-            // Ajouter la gestion des cookies ici si nécessaire
+            // Ajoutez ici la gestion des cookies si nécessaire
         }
     </script>
 </body>
+</html>
+
