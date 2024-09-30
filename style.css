@@ -173,5 +173,10 @@ footer a {
     pointer-events: none;  /* Désactive le lien */
     text-decoration: none; /* Supprime le soulignement */
 }
+footer a {
+    pointer-events: none !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
 
 
