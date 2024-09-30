@@ -152,4 +152,21 @@ form button:hover {
         flex-basis: 100%;
     }
 }
+h1 {
+    color: #5CBEA0; /* Couleur personnalisée pour ce texte */
+}
+.highlight {
+    color: #5CBEA0; /* Couleur verte */
+}
+
+.centered {
+    text-align: center; /* Centre le texte */
+    margin: 20px 0;
+}
+.product-item p {
+    text-decoration: none; /* Supprime le soulignement */
+}
+.product-item a {
+    text-decoration: none;
+}
 
